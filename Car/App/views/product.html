@@ -1,0 +1,65 @@
+
+    <link rel="stylesheet" href="/Car/Public/css/product.css">
+
+    <section>
+        <div class="banner">
+            <img src="/Car/Public/img/chanpinheader.jpg" alt="">
+            <span>超越无限</span>
+        </div>
+    </section>
+    <section>
+        <div class="bigding">
+            <div class="ding">
+                <div class="chanping">
+                    <a href="/Car/index.php/home">首页</a> >>
+                    <a href="/Car/index.php/product">产品与服务</a>
+                </div>
+                <div class="title-select wow bounceInDown">
+                    选择您的魅影
+                </div>
+                <ul class="zhanshi">
+                    <?php for($i=0;$i<2;$i++){ ?>
+                    <li class="wow bounceInDown">
+                        <span><?php echo $data[$i]['title'] ?></span>
+                        <img  src="<?php echo $data[$i]['img'] ?>" alt="">
+                        <span><?php echo $data[$i]['des'] ?></span>
+                    </li>
+
+                    <?php } ?>
+                </ul>
+                <?php for($i=0;$i<3;$i++){ ?>
+                <div class="jieshao">
+
+
+                    <div class="jieshao1 wow slideInLeft">
+                        <span><?php echo $datas[$i]['title'] ?></span>
+                        <span><?php echo $datas[$i]['titles'] ?></span>
+                        <div class="duantiao"></div>
+                        <?php echo $datas[$i]['text'] ?>
+                    </div>
+                    <div class="jieshaotu">
+                        <img class="wow bounceInDown" src="<?php echo $datas[$i]['img1'] ?>" alt="">
+                        <img class="wow slideInLeft" src="<?php echo $datas[$i]['img2'] ?>" alt="">
+                        <img  class="wow slideInRight" src="<?php echo $datas[$i]['img3'] ?>" alt="">
+                    </div>
+                </div>
+                <?php } ?>
+                <div class="linggan">
+                    <span>发现灵感</span>
+                    <ul class="linggantu" style="padding-bottom: 50px">
+                        <?php for($i=2;$i<5;$i++){ ?>
+                        <li class="wow bounceInUp" style="margin-bottom: 20px;padding-bottom: 20px">
+                            <img src="<?php echo $data[$i]['img'] ?>" alt="">
+                            <span><?php echo $data[$i]['title'] ?></span>
+                            <?php echo $data[$i]['des'] ?>
+                        </li>
+
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="img4 wow slideInLeft" data-wow-duration="1s" >
+
+        </div>
+    </section>

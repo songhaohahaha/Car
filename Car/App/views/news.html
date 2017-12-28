@@ -1,0 +1,64 @@
+
+    <link rel="stylesheet" href="/Car/Public/css/news.css">
+
+    <section>
+        <div class="banner">
+            <img src="/Car/Public/img/newheader.png" alt="">
+        </div>
+    </section>
+    <section>
+        <div class="bigding">
+            <div class="ding">
+                <div class="chanping">
+                    <a href="">首页</a> >>
+                    <a href="">新闻中心</a>
+                </div>
+                <div class="latest">
+                    <div class="latest-title">
+                        <span>T H E &nbsp; N E W </span>
+                        <div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="latest-top">
+                        <span>L A T E S T</span>
+                        <span>N E W S</span>
+                        <span>最新新闻</span>
+                    </div>
+                    <div class="latest-center wow bounceInDown" >
+                        <img src="<?php echo $data[4]['img'] ?>" alt="">
+                    </div>
+                    <div class="latest-bottom wow slideInLeft">
+                        <span><?php echo $data[4]['title'] ?></span>
+                        <?php echo $data[4]['text'] ?>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="list-title wow bounceInDown">THE&nbsp; NEW &nbsp;&nbsp;&nbsp;  LIST&nbsp; YEAR</div>
+                    <ul class="lists">
+                        <?php for($i=0;$i<4;$i++){ ?>
+                        <li>
+                            <img class="wow slideInLeft" src="<?php echo $data[$i]['img'] ?>" alt="">
+                            <div class="list-right wow slideInRight">
+                                <span><?php echo $data[$i]['title'] ?></span>
+                                <span><?php echo $data[$i]['des'] ?></span>
+                               <?php echo $data[$i]['text'] ?>
+                            </div>
+                        </li>
+                        <?php } ?>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="car">
+            <a href="">
+                <img class="wow slideInLeft" src="/Car/Public/img/car.png" alt="">
+            </a>
+        </div>
+    </section>

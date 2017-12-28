@@ -1,0 +1,159 @@
+
+    <link rel="stylesheet" href="/Car/Public/css/index.css">
+
+    <script src="/Car/Public/js/index.js"></script>
+
+
+    <banner>
+        <ul class="banner">
+            <?php for($i=0;$i<count($data);$i++){ ?>
+            <li>
+                <img src="<?php echo $data[$i]['pic'] ?>" alt="">
+                <a href="<?php echo $data[$i]['address']?>">了解详情 ></a>
+            </li>
+            <?php } ?>
+
+
+        </ul>
+    </banner>
+    <!--关于公司开始-->
+    <section>
+        <div class="about">
+            <div class="about-li">
+                <img src="/Car/Public/img/car.png" alt="">
+                <div class="about-lid"> <span>A b o u t</span>  <span>c o m p a n y</span></div>
+                <div class="about-zuoxi"></div>
+                <div class="about-zuocu"></div>
+                <span>关于</span>
+                <span>公司</span>
+                <div class="about-youcu"></div>
+                <div class="about-youxi"></div>
+                <div class="about-tiao"></div>
+                <div class="about-di"></div>
+            </div>
+        </div>
+        <div class="aboutus">
+            <div class="aboutus-li">
+                <img src="/Car/Public/img/aboutuslo.png" alt="">
+                <span>每一辆汽车/都有一个故事</span>
+                <div class="aboutus-bottom" style="overflow: hidden;">
+                    <img class="wow slideInLeft" data-wow-duration="0.5s"  src="<?php echo $data1[0]['img'] ?>" alt="">
+                    <div class="aboutus-right wow slideInRight" data-wow-offset="1"  data-wow-iteration="1" ata-wow-duration="0.5s" >
+                        <span><?php echo $data1[0]['title'] ?></span>
+                        <span><?php echo $data1[0]['des'] ?></span>
+                        <div></div>
+                        <?php echo $data1[0]['text'] ?>
+                        <?php echo $data1[0]['ytext'] ?>
+                        <a href="/Car/index.php/about">MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about">
+            <div class="about-li">
+                <img src="/Car/Public/img/car.png" alt="">
+                <div class="about-lid"> <span>P r o d u c t s</span> &nbsp;&nbsp; <span>a n d  &nbsp;s e r v i c e s </span></div>
+                <div class="about-zuoxi"></div>
+                <div class="about-zuocu"></div>
+                <span>产品</span>
+                <span>服务</span>
+                <div class="about-youcu"></div>
+                <div class="about-youxi"></div>
+                <div class="about-tiao"></div>
+                <div class="about-di"></div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="products-li">
+                <div class="products-left wow slideInLeft" data-wow-duration="0.5s">
+                    <span><?php echo $data1[1]['title'] ?></span>
+                    <div></div>
+                    <?php echo $data1[1]['text'] ?>
+                    <?php echo $data1[0]['ytext'] ?>
+                    <a href="/Car/index.php/product">MORE</a>
+                </div>
+                <img class="wow slideInRight" src="<?php echo $data1[1]['img'] ?>" data-wow-duration="0.5s" alt="">
+            </div>
+        </div>
+    </section>
+    <!--产品服务开始-->
+    <section>
+        <div class="background">
+            <img src="/Car/Public/img/background1.jpg" alt="">
+        </div>
+    </section>
+    <!--新闻中心开始-->
+    <section>
+        <div class="about">
+            <div class="about-li">
+                <img src="/Car/Public/img/car.png" alt="">
+                <div class="about-lid"> <span>N e w</span>  <span>C e n t e r</span></div>
+                <div class="about-zuoxi"></div>
+                <div class="about-zuocu"></div>
+                <span>新闻</span>
+                <span>中心</span>
+                <div class="about-youcu"></div>
+                <div class="about-youxi"></div>
+                <div class="about-tiao"></div>
+                <div class="about-di"></div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="news-li">
+                <img class="wow slideInLeft" data-wow-duration="0.5s" src="<?php echo $data1[2]['img'] ?>" alt="">
+                <div class="news-right wow slideInRight" data-wow-duration="0.5s">
+                    <span><?php echo $data1[2]['title'] ?></span>
+                    <span><?php echo $data1[2]['des'] ?></span>
+                    <?php echo $data1[2]['text'] ?>
+                    <a href="/Car/index.php/news">MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="news-li">
+                <div class="news-right wow slideInLeft" data-wow-duration="0.5s">
+                    <span><?php echo $data1[3]['title'] ?></span>
+                    <span><?php echo $data1[3]['des'] ?></span>
+                    <?php echo $data1[3]['text'] ?>
+                    <a href="/Car/index.php/news">MORE</a>
+                </div>
+                <img class="wow slideInRight" data-wow-duration="0.5s" src="<?php echo $data1[3]['img'] ?>" alt="">
+            </div>
+        </div>
+    </section>
+    <!--行业资讯开始-->
+    <section>
+        <div class="about">
+            <div class="about-li">
+                <img src="/Car/Public/img/car.png" alt="">
+                <div class="about-lid"> <span>I n f o r m a t i o n s</span></div>
+                <div class="about-zuoxi"></div>
+                <div class="about-zuocu"></div>
+                <span>行业</span>
+                <span>资讯</span>
+                <div class="about-youcu"></div>
+                <div class="about-youxi"></div>
+                <div class="about-tiao"></div>
+                <div class="about-di"></div>
+            </div>
+        </div>
+        <div class="Infor">
+            <ul class="Infor-li">
+                <?php for($i=0;$i<count($data2);$i++){ ?>
+                <li class="wow bounceInUp" data-wow-duration="0.5s">
+                    <div class="Infor-left">
+                        <span><?php echo $data2[$i]['title'] ?></span>
+                        <span><?php echo $data2[$i]['date'] ?></span>
+                    </div>
+                    <div class="Infor-right">
+                       <?php echo $data2[$i]['text'] ?>
+                    </div>
+                </li>
+                <?php } ?>
+
+            </ul>
+        </div>
+    </section>
+    <!--底部开始-->

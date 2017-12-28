@@ -1,0 +1,74 @@
+
+
+    <link rel="stylesheet" href="/Car/Public/css/service.css">
+
+<section class="banner">
+    <img src="/Car/Public/img/shouhou.png" alt="">
+</section>
+<section class="text" style="overflow: hidden">
+    <div class="top">
+        <span>首页</span><span>>></span><span>售后服务</span>
+    </div>
+    <div class="zi">
+        <div class="nei wow slideInLeft">
+            <span><?php echo $data[1]['title'] ?></span>
+            <?php echo $data[1]['text'] ?>
+        </div>
+
+        <img class="wow slideInRight" src="<?php echo $data[1]['img'] ?>" alt="">
+    </div>
+    <div class="cheng">
+        <div class="left wow slideInLeft">
+            <span><?php echo $data[0]['title'] ?></span>
+            <?php echo $data[0]['text'] ?>
+        </div>
+        <div class="right wow slideInRight">
+            <img src="<?php echo $data[0]['img'] ?>" alt="">
+        </div>
+    </div>
+
+    <div class="beijing">
+        <div class="top1 wow bounceInDown"></div>
+        <div class="left1 wow slideInLeft"></div>
+        <div class="right1 wow slideInRight"></div>
+    </div>
+    <div class="lan">
+        <div class="right2 wow slideInLeft">
+            <img src="<?php echo $data[2]['img'] ?>" alt="">
+        </div>
+        <div class="left2 wow slideInRight">
+
+            <span><?php echo $data[2]['title'] ?></span>
+            <?php echo $data[2]['text'] ?>
+        </div>
+
+    </div>
+    
+    <div class="tiao">
+        <a href="/Car/index.php/guarantee">
+            <span>保修服务</span>
+            <div class="quan">→</div>
+
+        </a>
+    </div>
+
+    <div class="bottom">
+        <span>继续您的旅程</span>
+        <div class="om">
+            <?php for($i=5;$i<7;$i++){ ?>
+            <div class="ft wow bounceInDown">
+                <img src="<?php echo $datas[$i]['img'] ?>" alt="">
+                <div class="des">
+                    <span><?php echo $datas[$i]['title'] ?></span>
+                    <?php echo $datas[$i]['des'] ?>
+                </div>
+            </div>
+           <?php } ?>
+        </div>
+    </div>
+
+    <div class="img4 wow slideInLeft">
+
+    </div>
+
+</section>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/KTV/Public/css/bootstrap.css">
+    <script src="/KTV/Public/js/jquery.js"></script>
+    <style>
+        .tips{
+            position: fixed;
+            top:0;
+            left:0;
+            width:0;
+            height:2px;
+            background: #5bc0de;
+            z-index: 999;
+        }
+    </style>
+    <script>
+        $(function(){
+            let tips = $('.tips');
+            $(window).ajaxStart(function(){
+                tips.animate({width:'80%'});
+            })
+//            success成功了  complete 是完成了
+            $(window).ajaxComplete(function(){
+                tips.stop().animate({width:'100%'}).queue(function(){
+                    $(this).css('width',0);
+                })
+            });
+
+            $('.dropdown').on('click',function(){
+                $('.dropdown-menu',this).slideToggle();
+//                $(this).children('.dropdown-menu').slideToggle();
+//                $(this).find('.dropdown-menu').slideToggle();
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="tips"></div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="margin-left: 50px">Car</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+                    <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">首页</a>
+                    <ul class="dropdown-menu">
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/Car/index.php/lunbomanage">轮播管理</a></li>
+                        <li><a href="/Car/index.php/pagemanage">页面详情</a></li>
+                        <li><a href="/Car/index.php/consultmanage">咨询管理</a></li>
+
+                        <li role="separator" class="divider"></li>
+
+                    </ul>
+                </li>
+                    <li class="<?php echo $title=='关于我们'?'active':''; ?>"><a href="/Car/index.php/aboutUsmanage">关于我们</a></li>
+                    <li class="dropdown">
+                        <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">产品服务</a>
+                        <ul class="dropdown-menu">
+                            <li role="separator" class="divider"></li>
+                            <li><a href="/Car/index.php/productmanage">产品详情</a></li>
+                            <li><a href="/Car/index.php/foundmanage">发现灵感</a></li>
+
+                            <li role="separator" class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="<?php echo $title=='新闻中心'?'active':''; ?>"><a href="/Car/index.php/newsmanage">新闻中心</a></li>
+                    <li class="<?php echo $title=='售后服务'?'active':''; ?>"><a href="/Car/index.php/servicemanage">售后服务</a></li>
+                    <li class="<?php echo $title=='保修服务'?'active':''; ?>"><a href="/Car/index.php/guaranteemanage">保修服务</a></li>
+                    <li class="<?php echo $title=='用户反馈'?'active':''; ?>"><a href="/Car/index.php/admincallmanage">用户反馈</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>

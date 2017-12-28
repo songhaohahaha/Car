@@ -1,0 +1,90 @@
+
+    <link rel="stylesheet" href="/Car/Public/css/call.css">
+
+<section class="banner">
+    <img src="/Car/Public/img/call.png" alt="">
+
+</section>
+<section class="text">
+    <div class="top">
+        <span>首页</span><span>>></span><span>联系我们</span>
+    </div>
+    <div class="title">
+        <div class="top1">
+            <span>联系</span><img src="/Car/Public/img/zeixiao.jpg" alt=""><span>我们。</span>
+        </div>
+        <div class="dia">
+            <div></div>
+            <span>THE</span><span>COMPANY INFORMA</span><span>TION</span>
+            <div></div>
+        </div>
+    </div>
+    <ul class="san">
+        <li class="wow slideInLeft">
+            <img src="/Car/Public/img/dizhi.png" alt="">
+            <p>北京／三里屯／大胡同街／B座303室<br>
+                上海 ／私塾圆路／301号</p>
+            <span>ADD</span>
+        </li>
+        <li class="wow bounceInDown">
+            <img src="/Car/Public/img/shu.png" alt="">
+            <p>010-1234567  /  010-9876543<br>
+                13495647389</p>
+            <span>TEL</span>
+        </li>
+        <li class="wow slideInRight">
+            <img src="/Car/Public/img/jiantou.png" alt="">
+            <p>foodfoodopex@163.com<br>
+                foodopex.com</p>
+            <span>mail</span>
+        </li>
+    </ul>
+    <div class="map wow bounceInUp"></div>
+
+    <div class="form">
+        <img src="/Car/Public/img/sred.jpg" alt="" class="wow slideInLeft">
+        <form class="biao" id="forms" action="javascript:;" >
+            <input type="text" placeholder="姓名" id="name" name="username">
+            <input type="text" placeholder="邮箱" id="mail" name="email">
+            <textarea  id="wenben" cols="30" rows="10" name="text"></textarea>
+            <div class="btn">
+                <button id="emp">清空</button>
+                <button type="submit" id="btns">提交</button>
+            </div>
+
+        </form>
+        <script>
+            let subm=$('#btns');
+            subm.on('click',function () {
+                // let data=$('#forms').serialize();
+                let data = new FormData($('#forms')[0]);
+
+
+                // data.appen d('picture','zhangsan')
+                $.ajax({
+                    url:'/Car/index.php/admincallmanage/insert',
+                    data:data,
+                    method:'post',
+                    processData:false,
+                    contentType:false,
+                    success:function (data) {
+                        if(data=='ok'){
+                            alert('提交成功');
+
+                        }else if(data=='error'){
+
+                        }
+                    }
+                })
+            })
+            $('#emp').on('click',function () {
+                $('textarea').val('');
+            })
+        </script>
+    </div>
+
+    <div class="img4 wow slideInLeft" data-wow-duration="1s">
+        
+    </div>
+
+</section>
